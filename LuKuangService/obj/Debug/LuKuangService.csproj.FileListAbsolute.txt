@@ -1,0 +1,7 @@
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Debug\LuKuangService.exe.config
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Debug\LuKuangService.exe
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Debug\LuKuangService.pdb
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Debug\LuKuangService.csproj.CoreCompileInputs.cache
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Debug\LuKuangService.exe
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Debug\LuKuangService.pdb
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Debug\LuKuangService.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\LuKuangService.exe.config
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\LuKuangService.exe
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\LuKuangService.pdb
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Common.Logging.Core.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Common.Logging.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Quartz.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Topshelf.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Release\LuKuangService.csproj.CoreCompileInputs.cache
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Release\LuKuangService.exe
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Release\LuKuangService.pdb
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Dapper.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\MySql.Data.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\bin\Release\Newtonsoft.Json.dll
+F:\Work\显示屏资料\ELD显示屏C#(lwl源代码)\诱导屏管理 v2.0\ELD_CreateLuKuang\ELD_CreateLuKuang\LuKuangService\obj\Release\LuKuangService.csprojResolveAssemblyReference.cache
