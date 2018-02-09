@@ -1,0 +1,306 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VCDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\VCDemo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 VCDemo"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "VCDemo 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VCDEMO_DIALOG DIALOGEX 0, 0, 397, 405
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "VCDemo"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "打开电源",IDC_BTN_POWERON,20,105,40,14
+    PUSHBUTTON      "关闭电源",IDC_BTN_POWEROFF,65,105,40,14
+    PUSHBUTTON      "校正时间",IDC_BTN_ADJUSTTIME,260,105,40,14
+    PUSHBUTTON      "设置亮度",IDC_BTN_SETBRIGHT,170,105,40,14
+    PUSHBUTTON      "读取电源状态",IDC_BTN_GETPOWER,110,105,55,14
+    PUSHBUTTON      "读取亮度",IDC_BTN_GETBRIGHT,215,105,40,14
+    PUSHBUTTON      "发送点阵文字",IDC_BTN_TEXT,20,125,60,14
+    PUSHBUTTON      "发送点阵图像",IDC_BTN_DIB,85,125,60,14
+    PUSHBUTTON      "发送内码文字",IDC_BTN_STRING,150,125,60,14
+    PUSHBUTTON      "发送日期时间",IDC_BTN_DCLOCK,20,145,60,14
+    PUSHBUTTON      "定时发送测试",IDC_BTN_TIMER,115,385,95,14
+    COMBOBOX        IDC_COMBO_DEVICE_TYPE,10,5,70,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_COM_PORT,55,40,65,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "串口通讯参数",IDC_STATIC,10,25,130,55
+    LTEXT           "串口号",IDC_STATIC,25,45,25,8
+    COMBOBOX        IDC_COMBO_COM_SPEED,55,60,65,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "波特率",IDC_STATIC,25,65,25,8
+    EDITTEXT        IDC_EDIT_REMOTE_IP,195,40,94,14,ES_AUTOHSCROLL
+    GROUPBOX        "网络通讯参数",IDC_STATIC,150,25,160,55
+    LTEXT           "控制卡IP",IDC_STATIC,161,45,33,8
+    EDITTEXT        IDC_EDIT_LOCAL_PORT,195,60,94,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "本地端口",IDC_STATIC,160,65,33,8
+    GROUPBOX        "异步方式，使用窗体消息方式获得命令执行结果",IDC_STATIC,
+                    10,90,300,150
+    PUSHBUTTON      "发送图片文件",IDC_BTN_PIC_FILE,215,125,60,14
+    PUSHBUTTON      "线程发送测试",IDC_BTN_THREAD,215,385,95,14
+    GROUPBOX        "阻塞方式，执行命令函数时，进程阻塞，直到获得应答结果时函数返回",
+                    IDC_STATIC,10,245,300,75
+    PUSHBUTTON      "发送模拟时钟",IDC_BTN_ACLOCK,150,145,60,14
+    PUSHBUTTON      "打开电源",IDC_BTN_POWERON2,20,260,40,14
+    PUSHBUTTON      "关闭电源",IDC_BTN_POWEROFF2,65,260,40,14
+    PUSHBUTTON      "校正时间",IDC_BTN_ADJUSTTIME2,260,260,40,14
+    PUSHBUTTON      "设置亮度",IDC_BTN_SETBRIGHT2,170,260,40,14
+    PUSHBUTTON      "读取电源状态",IDC_BTN_GETPOWER2,110,260,55,14
+    PUSHBUTTON      "读取亮度",IDC_BTN_GETBRIGHT2,215,260,40,14
+    PUSHBUTTON      "发送点阵文字",IDC_BTN_TEXT2,20,280,60,14
+    PUSHBUTTON      "发送点阵图像",IDC_BTN_DIB2,85,280,60,14
+    PUSHBUTTON      "发送内码文字",IDC_BTN_STRING2,150,280,60,14
+    PUSHBUTTON      "发送日期时间",IDC_BTN_DCLOCK2,20,300,60,14
+    PUSHBUTTON      "发送图片文件",IDC_BTN_PIC_FILE2,215,280,60,14
+    PUSHBUTTON      "发送模拟时钟",IDC_BTN_ACLOCK2,85,300,60,14
+    PUSHBUTTON      "发送Vsq文件",IDC_BTN_VSQ,215,145,60,14
+    PUSHBUTTON      "前一幕",IDC_BTN_CHAPTER_BACK,75,185,40,14
+    PUSHBUTTON      "后一幕",IDC_BTN_CHAPTER_NEXT,120,185,40,14
+    PUSHBUTTON      "只更新1个节目",IDC_BTN_CHAPTER,320,110,65,20
+    GROUPBOX        "局部更新例程",IDC_STATIC,315,90,76,175
+    PUSHBUTTON      "只更新1个分区",IDC_BTN_REGION,320,140,65,20
+    PUSHBUTTON      "只更新1个页面",IDC_BTN_LEAF,320,170,65,20
+    PUSHBUTTON      "只更新1个对象",IDC_BTN_OBJECT,320,200,65,20
+    PUSHBUTTON      "恢复缺省节目显示",IDC_BTN_RESETDISPLAY,205,165,70,14
+    EDITTEXT        IDC_EDIT_DSTADDR,230,5,78,14,ES_AUTOHSCROLL
+    LTEXT           "控制卡地址",IDC_STATIC,180,10,41,8
+    PUSHBUTTON      "打开电源",IDC_BTN_POWERON3,20,340,40,14
+    GROUPBOX        "通讯参数不使用结构体的例子，所有同类函数都可以使用此方式",
+                    IDC_STATIC,10,325,300,35
+    PUSHBUTTON      "获取在线控制卡列表",IDC_BTN_ONLINE,215,365,95,15
+    PUSHBUTTON      "启动在线控制卡监听服务",IDC_BTN_ONLINE_START,15,365,95,
+                    15
+    PUSHBUTTON      "停止在线控制卡监听服务",IDC_BTN_ONLINE_STOP,115,365,95,
+                    15
+    PUSHBUTTON      "发送作战时间",IDC_BTN_CAMPAIGN,85,145,60,14
+    GROUPBOX        "参数设置例程",IDC_STATIC,315,270,75,35
+    PUSHBUTTON      "控制卡参数",IDC_BTN_BOARD_PARAM,320,280,65,20
+    PUSHBUTTON      "串口转发",IDC_BTN_COM_TRANSFER,241,220,60,14
+    EDITTEXT        IDC_EDIT_COMTRANSFER,15,222,220,10,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_COLOR_TYPE,85,5,70,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "定时开关屏",IDC_BTN_POWERSCHEDULE,215,185,60,14
+    PUSHBUTTON      "预览示例",IDC_BTN_PREVIEW,165,185,45,14
+    PUSHBUTTON      "发送图文播放单",IDC_BTN_MULTI,85,165,60,14
+    PUSHBUTTON      "当前幕",IDC_BTN_GET_CUR_CHAPTER,20,185,45,14
+    PUSHBUTTON      "发送表格",IDC_BTN_TABLE,20,165,60,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VCDemo Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VCDemo\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VCDemo.EXE\0"
+            VALUE "ProductName", "VCDemo 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VCDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 390
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 398
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VCDEMO_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_DEVICE_TYPE, 0x403, 9, 0
+0xaeb4, 0xdabf, 0xbdb7, 0xbdca, "\000" 
+    IDC_COMBO_DEVICE_TYPE, 0x403, 9, 0
+0xf8cd, 0xe7c2, 0xbdb7, 0xbdca, "\000" 
+    IDC_COMBO_COM_SPEED, 0x403, 6, 0
+0x3735, 0x3036, 0x0030, 
+    IDC_COMBO_COM_SPEED, 0x403, 6, 0
+0x3833, 0x3034, 0x0030, 
+    IDC_COMBO_COM_SPEED, 0x403, 6, 0
+0x3931, 0x3032, 0x0030, 
+    IDC_COMBO_COM_SPEED, 0x403, 5, 0
+0x3639, 0x3030, "\000" 
+    IDC_COMBO_COLOR_TYPE, 0x403, 7, 0
+0xa5b5, 0xabcb, 0xabc9, "\000" 
+    IDC_COMBO_COLOR_TYPE, 0x403, 11, 0
+0xabc8, 0xcab2, 0xdece, 0xd2bb, 0xc8b6, "\000" 
+    IDC_COMBO_COLOR_TYPE, 0x403, 5, 0
+0xabc8, 0xcab2, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 VCDemo(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\VCDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

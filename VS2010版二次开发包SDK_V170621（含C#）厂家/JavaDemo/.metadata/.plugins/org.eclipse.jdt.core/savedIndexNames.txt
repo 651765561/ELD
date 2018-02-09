@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+D:\MyWorks\VS2010\D7_SDK\JavaDemo\.metadata\.plugins\org.eclipse.jdt.core

@@ -1,0 +1,1 @@
+SimuLED.exe export_preview_items 320 192 2 preview.dat

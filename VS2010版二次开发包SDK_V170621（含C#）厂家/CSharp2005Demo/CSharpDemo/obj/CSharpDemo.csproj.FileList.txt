@@ -1,0 +1,8 @@
+bin\Debug\CSharpDemo.exe
+bin\Debug\CSharpDemo.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\CSharpDemo.frmMain.resources
+obj\Debug\CSharpDemo.Properties.Resources.resources
+obj\Debug\CSharpDemo.csproj.GenerateResource.Cache
+obj\Debug\CSharpDemo.exe
+obj\Debug\CSharpDemo.pdb

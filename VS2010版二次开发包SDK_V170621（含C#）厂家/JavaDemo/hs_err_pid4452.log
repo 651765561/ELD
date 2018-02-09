@@ -1,0 +1,177 @@
+#
+# An unexpected error has been detected by Java Runtime Environment:
+#
+#  Internal Error (0xeedfade), pid=4452, tid=2584
+#
+# Java VM: Java HotSpot(TM) Client VM (11.3-b02 mixed mode windows-x86)
+# Problematic frame:
+# C  [kernel32.dll+0x12fd3]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00857000):  JavaThread "main" [_thread_in_native, id=2584, stack(0x008f0000,0x00940000)]
+
+siginfo: ExceptionCode=0xeedfade, ExceptionInformation=0x0b0c2800 0x0b21045c 0x0b0c2800 0x0b0c2800 0x0b1ab490 0x0093f8a8 0x0093f85c 
+
+Registers:
+EAX=0x0093f7d8, EBX=0x0b0c2800, ECX=0x00000000, EDX=0x0b0c2800
+ESP=0x0093f7d4, EBP=0x0093f828, ESI=0x0093f85c, EDI=0x0b1ab490
+EIP=0x7c812fd3, EFLAGS=0x00000202
+
+Top of Stack: (sp=0x0093f7d4)
+0x0093f7d4:   0b0c2800 0eedfade 00000001 00000000
+0x0093f7e4:   7c812fd3 00000007 0b0c2800 0b21045c
+0x0093f7f4:   0b0c2800 0b0c2800 0b1ab490 0093f8a8
+0x0093f804:   0093f85c 1000288f 00000000 00000009
+0x0093f814:   00000000 0093f810 06a0e288 0093f864
+0x0093f824:   0b212980 0093f8a8 0b0c2800 0eedfade
+0x0093f834:   00000001 00000007 0093f840 0b0c2800
+0x0093f844:   0b21045c 0b0c2800 0b0c2800 0b1ab490 
+
+Instructions: (pc=0x7c812fd3)
+0x7c812fc3:   8d 7d c4 f3 a5 5f 8d 45 b0 50 ff 15 10 15 80 7c
+0x7c812fd3:   5e c9 c2 10 00 85 ff 0f 8e 5e 8e ff ff 8b 55 fc 
+
+
+Stack: [0x008f0000,0x00940000],  sp=0x0093f7d4,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [kernel32.dll+0x12fd3]
+C  [LEDSender2010.dll+0x2800]
+C  [jna8137492970037610281.tmp+0x9182]
+C  [jna8137492970037610281.tmp+0x2161]
+C  [jna8137492970037610281.tmp+0x28c4]
+j  com.sun.jna.Function.invokeVoid(I[Ljava/lang/Object;)V+0
+j  com.sun.jna.Function.invoke([Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;+44
+j  com.sun.jna.Function.invoke(Ljava/lang/Class;[Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;+194
+j  com.sun.jna.Library$Handler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+344
+j  $Proxy0.LED_Cleanup()V+9
+j  CommonDemo.main([Ljava/lang/String;)V+6
+v  ~StubRoutines::call_stub
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.jna.Function.invokeVoid(I[Ljava/lang/Object;)V+0
+j  com.sun.jna.Function.invoke([Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;+44
+j  com.sun.jna.Function.invoke(Ljava/lang/Class;[Ljava/lang/Object;Ljava/util/Map;)Ljava/lang/Object;+194
+j  com.sun.jna.Library$Handler.invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+344
+j  $Proxy0.LED_Cleanup()V+9
+j  CommonDemo.main([Ljava/lang/String;)V+6
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0ab28800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=5328, stack(0x0ad70000,0x0adc0000)]
+  0x0ab1f000 JavaThread "CompilerThread0" daemon [_thread_blocked, id=6012, stack(0x0ad20000,0x0ad70000)]
+  0x0ab4b800 JavaThread "Attach Listener" daemon [_thread_blocked, id=616, stack(0x0acd0000,0x0ad20000)]
+  0x0ab4a400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4836, stack(0x0ac80000,0x0acd0000)]
+  0x0ab0cc00 JavaThread "Finalizer" daemon [_thread_blocked, id=3164, stack(0x0ac30000,0x0ac80000)]
+  0x0ab08400 JavaThread "Reference Handler" daemon [_thread_blocked, id=1832, stack(0x0abe0000,0x0ac30000)]
+=>0x00857000 JavaThread "main" [_thread_in_native, id=2584, stack(0x008f0000,0x00940000)]
+
+Other Threads:
+  0x0ab04c00 VMThread [stack: 0x0ab90000,0x0abe0000] [id=5724]
+  0x0ab2bc00 WatcherThread [stack: 0x0adc0000,0x0ae10000] [id=5848]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 960K, used 697K [0x029f0000, 0x02af0000, 0x02ed0000)
+  eden space 896K,  70% used [0x029f0000, 0x02a8e578, 0x02ad0000)
+  from space 64K, 100% used [0x02ae0000, 0x02af0000, 0x02af0000)
+  to   space 64K,   0% used [0x02ad0000, 0x02ad0000, 0x02ae0000)
+ tenured generation   total 4096K, used 144K [0x02ed0000, 0x032d0000, 0x069f0000)
+   the space 4096K,   3% used [0x02ed0000, 0x02ef4170, 0x02ef4200, 0x032d0000)
+ compacting perm gen  total 12288K, used 3347K [0x069f0000, 0x075f0000, 0x0a9f0000)
+   the space 12288K,  27% used [0x069f0000, 0x06d34d68, 0x06d34e00, 0x075f0000)
+No shared spaces configured.
+
+Dynamic libraries:
+0x00400000 - 0x00424000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\bin\javaw.exe
+0x7c920000 - 0x7c9b3000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c91e000 	C:\WINDOWS\system32\kernel32.dll
+0x77da0000 - 0x77e49000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x77e50000 - 0x77ee3000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77fc0000 - 0x77fd1000 	C:\WINDOWS\system32\Secur32.dll
+0x77d10000 - 0x77da0000 	C:\WINDOWS\system32\USER32.dll
+0x77ef0000 - 0x77f39000 	C:\WINDOWS\system32\GDI32.dll
+0x76300000 - 0x7631d000 	C:\WINDOWS\system32\IMM32.DLL
+0x62c20000 - 0x62c29000 	C:\WINDOWS\system32\LPK.DLL
+0x73fa0000 - 0x7400b000 	C:\WINDOWS\system32\USP10.dll
+0x7c340000 - 0x7c396000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\msvcr71.dll
+0x6d8b0000 - 0x6db06000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\client\jvm.dll
+0x76b10000 - 0x76b3a000 	C:\WINDOWS\system32\WINMM.dll
+0x6d340000 - 0x6d348000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\hpi.dll
+0x76bc0000 - 0x76bcb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x6d860000 - 0x6d86c000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\verify.dll
+0x6d3e0000 - 0x6d3ff000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\java.dll
+0x6d8a0000 - 0x6d8af000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\zip.dll
+0x68000000 - 0x68036000 	C:\WINDOWS\system32\rsaenh.dll
+0x77be0000 - 0x77c38000 	C:\WINDOWS\system32\msvcrt.dll
+0x759d0000 - 0x75a7f000 	C:\WINDOWS\system32\USERENV.dll
+0x5fdd0000 - 0x5fe25000 	C:\WINDOWS\system32\netapi32.dll
+0x6d6c0000 - 0x6d6d3000 	D:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\bin\net.dll
+0x71a20000 - 0x71a37000 	C:\WINDOWS\system32\WS2_32.dll
+0x71a10000 - 0x71a18000 	C:\WINDOWS\system32\WS2HELP.dll
+0x719c0000 - 0x719fe000 	C:\WINDOWS\System32\mswsock.dll
+0x76ef0000 - 0x76f17000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76d30000 - 0x76d48000 	C:\WINDOWS\system32\iphlpapi.dll
+0x76f80000 - 0x76f88000 	C:\WINDOWS\System32\winrnr.dll
+0x76f30000 - 0x76f5c000 	C:\WINDOWS\system32\WLDAP32.dll
+0x76f90000 - 0x76f96000 	C:\WINDOWS\system32\rasadhlp.dll
+0x10000000 - 0x10052000 	C:\Documents and Settings\yj\Local Settings\Temp\jna8137492970037610281.tmp
+0x0b0c0000 - 0x0b1ca000 	D:\YUJIANG\VS2010\D7_SDK\JavaDemo\LEDSender2010.dll
+0x770f0000 - 0x7717b000 	C:\WINDOWS\system32\oleaut32.dll
+0x76990000 - 0x76ace000 	C:\WINDOWS\system32\ole32.dll
+0x77bd0000 - 0x77bd8000 	C:\WINDOWS\system32\version.dll
+0x77180000 - 0x77283000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.6028_x-ww_61e65202\comctl32.dll
+0x77f40000 - 0x77fb6000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x72f70000 - 0x72f96000 	C:\WINDOWS\system32\winspool.drv
+0x71a40000 - 0x71a4b000 	C:\WINDOWS\system32\wsock32.dll
+0x0b1d0000 - 0x0b1e3000 	D:\YUJIANG\VS2010\D7_SDK\JavaDemo\Lzss.dll
+0x73d30000 - 0x73e22000 	C:\WINDOWS\system32\MFC42.DLL
+0x73ac0000 - 0x73ad7000 	C:\WINDOWS\system32\AVIFil32.Dll
+0x77bb0000 - 0x77bc5000 	C:\WINDOWS\system32\MSACM32.dll
+0x73b40000 - 0x73b60000 	C:\WINDOWS\system32\MSVFW32.dll
+0x7d590000 - 0x7dd84000 	C:\WINDOWS\system32\SHELL32.dll
+0x61be0000 - 0x61bed000 	C:\WINDOWS\system32\MFC42LOC.DLL
+0x5adc0000 - 0x5adf7000 	C:\WINDOWS\system32\uxtheme.dll
+0x74680000 - 0x746cc000 	C:\WINDOWS\system32\MSCTF.dll
+0x251f0000 - 0x25207000 	C:\Program Files\Common Files\Thunder Network\NetMon\net_monitor2.0.2.7.dll
+0x7c3c0000 - 0x7c43c000 	C:\WINDOWS\system32\MSVCP71.dll
+0x60fd0000 - 0x61025000 	C:\WINDOWS\system32\hnetcfg.dll
+0x71a00000 - 0x71a08000 	C:\WINDOWS\System32\wshtcpip.dll
+
+VM Arguments:
+jvm_args: -Djava.library.path=D:\YUJIANG\VS2010\D7_SDK\JavaDemo\src -Dfile.encoding=GBK 
+java_command: CommonDemo
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=D:/Program Files/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin/client;D:/Program Files/Genuitec/Common/binary/com.sun.java.jdk.win32.x86_1.6.0.013/jre/bin;C:\Program Files\ARM\ADSv1_2\bin;C:\Program Files\Borland\Delphi7\Bin;C:\Program Files\Borland\Delphi7\Projects\Bpl\;C:\PROGRA~1\Borland\Delphi5\Projects\Bpl;C:\PROGRA~1\Borland\vbroker\jre\Bin;C:\PROGRA~1\Borland\vbroker\Bin;C:\PROGRA~1\Borland\Delphi5\Bin;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\PROGRA~1\Borland\Delphi6\Bin;C:\PROGRA~1\Borland\Delphi6\Projects\Bpl;C:\Program Files\Microsoft SQL Server\80\Tools\BINN;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files\Microsoft Visual Studio\Common\Tools;C:\Program Files\Microsoft Visual Studio\VC98\bin;C:\gcc;C:\Program Files\SSH Communications Security\SSH Secure Shell
+USERNAME=yj
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 8 (8 cores per cpu, 2 threads per core) family 6 model 10 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, ht
+
+Memory: 4k page, physical 2097151k(1508224k free), swap 4194303k(3078260k free)
+
+vm_info: Java HotSpot(TM) Client VM (11.3-b02) for windows-x86 JRE (1.6.0_13-b03), built on Mar  9 2009 01:15:24 by "java_re" with MS VC++ 7.1
+
+time: Fri Nov 01 17:06:20 2013
+elapsed time: 0 seconds
+

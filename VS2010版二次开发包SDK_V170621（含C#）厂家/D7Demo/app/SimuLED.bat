@@ -1,0 +1,1 @@
+SimuLED.exe 256 64 2 C:\preview.dat

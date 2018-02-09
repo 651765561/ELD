@@ -1,0 +1,158 @@
+unit uTestThread;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, LEDAPI;
+
+const
+  TEST_THREAD_COUNT = 5;
+
+type
+  TTestThread = class(TThread)
+  private
+    FLock: TRTLCriticalSection;
+    FCounter: DWord;
+    FMakeIndex: Integer;
+    FIndex: Integer;
+    FColorType: Integer;
+    procedure Lock;
+    procedure Unlock;
+    function GetCounter: DWord;
+    function GetMakeIndex: Integer;
+  protected
+  public
+    constructor Create(AIndex: Integer; AColorType: Integer);
+    destructor Destroy; override;
+    procedure Execute; override;
+    property Counter: DWord read GetCounter;
+    property MakeIndex: Integer read GetMakeIndex;
+  end;
+
+var
+  SenderParam: array[0..TEST_THREAD_COUNT - 1] of TSenderParam;
+  TestThreads: array[0..TEST_THREAD_COUNT - 1] of TTestThread;
+
+procedure TestThread_Initialize;
+procedure TestThread_Terminate;
+procedure TestThread_Start(AColorType: Integer);
+function TestThread_GetCounter(AIndex: Integer): Integer;
+function TestThread_GetMakeIndex(AIndex: Integer): Integer;
+
+implementation
+
+procedure TestThread_Initialize;
+var
+  I: Integer;
+begin
+  for I := 0 to TEST_THREAD_COUNT - 1 do
+  begin
+    TestThreads[I] := nil;
+  end;
+end;
+
+procedure TestThread_Terminate;
+var
+  I: Integer;
+begin
+  for I := 0 to TEST_THREAD_COUNT - 1 do
+  begin
+    if Assigned(TestThreads[I]) then
+    begin
+      TestThreads[I].Terminate;
+      WaitForSingleObject(TestThreads[I].Handle, INFINITE);
+      TestThreads[I] := nil;
+    end;
+  end;
+end;
+
+procedure TestThread_Start(AColorType: Integer);
+var
+  I: Integer;
+begin
+  for I := 0 to TEST_THREAD_COUNT - 1 do
+  begin
+    TestThreads[I] := TTestThread.Create(I, AColorType);
+    Sleep(1);
+  end;
+end;
+
+function TestThread_GetCounter(AIndex: Integer): Integer;
+begin
+  Result := 0;
+  if Assigned(TestThreads[AIndex]) then Result := TestThreads[AIndex].Counter;
+end;
+
+function TestThread_GetMakeIndex(AIndex: Integer): Integer;
+begin
+  Result := 0;
+  if Assigned(TestThreads[AIndex]) then Result := TestThreads[AIndex].MakeIndex;
+end;
+
+constructor TTestThread.Create(AIndex: Integer; AColorType: Integer);
+begin
+  FIndex := AIndex;
+  FCounter := 0;
+  InitializeCriticalSection(FLock);
+  FreeOnTerminate := True;
+  inherited Create(False);
+end;
+
+destructor TTestThread.Destroy;
+begin
+  DeleteCriticalSection(FLock);
+  inherited Destroy;
+end;
+
+procedure TTestThread.Lock;
+begin
+  EnterCriticalSection(FLock);
+end;
+
+procedure TTestThread.Unlock;
+begin
+  LeaveCriticalSection(FLock);
+end;
+
+function TTestThread.GetCounter: DWord;
+begin
+  Lock;
+  Result := FCounter;
+  Unlock;
+end;
+
+function TTestThread.GetMakeIndex: Integer;
+begin
+  Lock;
+  Result := FMakeIndex;
+  Unlock;
+end;
+
+procedure TTestThread.Execute;
+var
+  K: Integer;
+begin
+  while not Terminated do
+  begin
+    K := MakeRoot(ROOT_PLAY, FColorType);
+    AddChapter(K, 1000000, WAIT_CHILD);
+
+    AddRegion(K, 0, 0, 64, 64, 0);
+    AddLeaf(K, 10000, WAIT_CHILD);
+    //AddText(K, 0, 0, 64, 64, 1, 0, PChar(FormatDateTime('nnsszzz', Now)), 'ËÎÌו', 12, RGB(255,255,0), WFS_BOLD, 0, 0, 1, 5, 0, 5, 0, 5, 10000);
+    //AddPicture(K, 0, 0, 64, 64, 1, 0, PChar(ExtractFilePath(Application.ExeName) + 'Test.bmp'), 0, 1, 5, 0, 5, 0, 5, 10000);
+    AddDateTime(K, 0, 0, 64, 32, 1, 0, 'ËÎÌו', 12, 255, 0, 0, 0, 0, 0, '#y:#n:#s');
+    //AddString(K, 0, 0, 64, 64, 1, 0, PChar('Hello World!'), 0, 255, 1, 5, 0, 5, 0, 5, 10000);
+    //LED_Compress(K);
+
+    //LED_SendToScreen(@SenderParam[FIndex], K);
+    Sleep(1);
+    Lock;
+    FMakeIndex := K;
+    Inc(FCounter);
+    Unlock;
+  end;
+end;
+
+end.

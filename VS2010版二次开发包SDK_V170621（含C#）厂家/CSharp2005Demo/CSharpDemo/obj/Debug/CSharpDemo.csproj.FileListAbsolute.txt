@@ -1,0 +1,8 @@
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.exe
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.pdb
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\bin\Debug\CSharpDemo.exe
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\bin\Debug\CSharpDemo.pdb
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.csprojResolveAssemblyReference.cache
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.frmMain.resources
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.Properties.Resources.resources
+F:\Work\显示屏资料\VS2010版二次开发包SDK_V170621（含C#）厂家\CSharp2005Demo\CSharpDemo\obj\Debug\CSharpDemo.csproj.GenerateResource.Cache
